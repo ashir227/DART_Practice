@@ -18,6 +18,7 @@ class Mobile {
     late String Model;
     late int Price;
 
+
 phoneinfo(){
     print("Mobile Brand is $Brand");
     print("Mobile Model is $Model");

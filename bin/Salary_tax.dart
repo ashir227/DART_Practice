@@ -1,5 +1,3 @@
-import 'dart:async';
-
 void main() {
   Employee obj = Employee("Ramesh",700000 );
   obj.calculate();

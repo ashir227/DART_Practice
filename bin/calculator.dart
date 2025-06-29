@@ -1,5 +1,3 @@
-import 'package:my_project/my_project.dart';
-
 void main() {
   Calculator obj = Calculator(10, 8);
   obj.add();

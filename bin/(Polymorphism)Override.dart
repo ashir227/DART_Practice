@@ -31,6 +31,8 @@ class Teacher extends Student{
     print("Name is $name");
     print("Age is $age");
     print("Thay are Teaching");
+    super.role();
+
   }
 
 }

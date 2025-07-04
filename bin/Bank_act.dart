@@ -1,31 +1,35 @@
+import 'dart:ffi';
 import 'dart:io';
-class Device{
-  String? brand;
-  brandname(){
-    print("Phone Brand Is:");
-  }
+
+abstract class shape{
+calculate_area();
 }
-mixin camerafeature{
-  String? click;
-  takephoto(){
-print("Take Photo like a pro $click");
-  }
-}
-class smartphone extends Device with camerafeature{
+class circle  extends shape{
+    late double radius;
+    late double diamenter;
+    circle(this.radius,this.diamenter);
 @override
-brandname() {
-    print("What is Brand Name");
-    return super.brandname();
+calculate_area() {
+    radius = diamenter/2;
+    print(radius);
   }
+
 }
-void main(){
-stdout.write("name is :");
-String? brand = stdin.readLineSync();
-stdout.write("Phote is :");
-String? click = stdin.readLineSync();
-smartphone obj = smartphone();
-obj.brandname = brand;
-obj.takephoto = click;
-obj.brandname();
-obj.takephoto();
+class Rectangle extends shape{
+// late double area;
+late double length;
+late double width;
+Rectangle(this.length,this.width);
+@override
+void calculate_area(){
+    areas  = length *width;
+    print("Area is $areas");
+}
+}
+void main() {
+circle obj = circle(33, 7);
+obj.calculate_area();
+
+Rectangle obj1 = Rectangle(2, 3, 66);
+
 }

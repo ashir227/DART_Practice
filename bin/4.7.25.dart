@@ -1,27 +1,40 @@
-import 'dart:io';
+abstract class Vehicle {
+  String brand;
+  String model;
 
-class news {
-  late double length;
-  late double width;
-nn(){
-  return length * width;
+  Vehicle(this.brand, this.model);
+
+  void startEngine();  // abstract method
 }
+
+class Car extends Vehicle {
+  Car(String brand, String model) : super(brand, model);
+
+  @override
+  void startEngine() {
+    print("Car Brand is $brand");
+    print("Car Model is $model");
+    print("Car Engine Started");
+  }
 }
-void main(){
-  print("Put Area Length");
-double length = double.parse(stdin.readLineSync()!);
-  print("Put Area Width");
-  double width = double.parse(stdin.readLineSync()!);
 
-  news obj = news();
-  obj.length;
+class Bike extends Vehicle {
+  Bike(String brand, String model) : super(brand, model);
 
-  news obj1 = news();
-  obj1.width;
+  @override
+  void startEngine() {
+    print("Bike Brand is $brand");
+    print("Bike Model is $model");
+    print("Bike Engine Started");
+  }
+}
+ 
+void main() {
+  Car obj = Car("Toyota", "New 2025");
+  obj.startEngine();
 
+  print("-------------");
 
-  double Result = obj.nn();
-  print("Area is $Result");
-  
-  
+  Bike obj1 = Bike("Honda", "Old 2024");
+  obj1.startEngine();
 }

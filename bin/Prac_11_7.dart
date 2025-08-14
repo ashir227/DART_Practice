@@ -1,3 +1,5 @@
+import 'dart:io';
+
 abstract class Employee {
   String name;
   late double salary;
@@ -37,9 +39,16 @@ class Worker extends Manager {
 }
 
 void main() {
-  Manager obj = Manager("NTR", 80000, 3000);
+  stdout.write("Enter name");
+  String? name = stdin.readLineSync();
+  stdout.write("Enter Salary");
+  double salary = double.parse(stdin.readLineSync()!);
+  stdout.write("Enter Salary");
+  double bonus = double.parse(stdin.readLineSync()!);
+
+  Manager obj = Manager(name!, salary, bonus);
   obj.displayinfo();
   print("+++++++++++++++++++++++++");
-  Worker obj1 = Worker("Ali", 40000, 2000);
+  Worker obj1 = Worker(name, salary, bonus);
   obj1.displayinfo();
 }

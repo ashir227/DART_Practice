@@ -1,6 +1,9 @@
 void main() {
-  List<String> Fruit = ["Apple", "Banana", "Lemon"];
-  for (var i in Fruit) {
-    print(i);
-  }
+  Map<String, dynamic> Country = {
+    "Country": "Pakitsn",
+    "America": "Manchister",
+    "Japan": "Tokyo"
+  };
+  Country.addAll({"China": "Chicago", "Italy": "Istambol"});
+  print(Country);
 }

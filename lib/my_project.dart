@@ -1,9 +1,8 @@
+number() {
+  List sum = [1, 44, 6, 22, 9];
+  print(sum);
+}
+
 void main() {
-  Map<String, dynamic> Country = {
-    "Country": "Pakitsn",
-    "America": "Manchister",
-    "Japan": "Tokyo"
-  };
-  Country.addAll({"China": "Chicago", "Italy": "Istambol"});
-  print(Country);
+  print(number());
 }
